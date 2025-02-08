@@ -1,0 +1,266 @@
+/* General Styles */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+#navbar {
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+body.dark-mode #navbar {
+  background: #1a1a1a;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#navbar ul li {
+  margin-left: 20px;
+}
+
+#navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#navbar ul li a:hover {
+  color: #ddd;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: url(assets/image.png) center/cover no-repeat;
+  color: #969191;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.hero .btn {
+  background: #fff;
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  animation: fadeIn 4s ease-in-out;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+.about {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 0;
+  background: #f4f4f4;
+}
+
+body.dark-mode .projects {
+  background: #1a1a1a;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px; /* Ensure all cards are the same height */
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body.dark-mode .project-card {
+  background: #333;
+  color: #fff;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures the image fills the space without distortion */
+  border-radius: 8px;
+}
+
+.project-card h3,
+.project-card p {
+  margin: 10px 0;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 0;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+#contact-form button {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.dark-mode #contact-form button {
+  background: #fff;
+  color: #333;
+}
+
+#contact-form button:hover {
+  background: #555;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+body.dark-mode footer {
+  background: #1a1a1a;
+}
+
+/* Social Links */
+.social-links {
+  display: flex; /* Use Flexbox to arrange the links */
+  justify-content: center; /* Centers the links horizontally */
+  align-items: center; /* Centers the links vertically (if needed) */
+  margin-top: 10px; /* Adds spacing from the content above */
+  white-space: nowrap; /* Ensures the links stay on a single line */
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
